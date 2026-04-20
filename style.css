@@ -399,3 +399,53 @@ footer {
     text-align: center;
   }
 }
+/* CONTACT PAGE ------------------------------------------------ */
+
+.contact-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.contact-intro {
+  color: var(--text);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.contact-item i {
+  color: var(--highlight);
+  font-size: 1.3rem;
+  width: 24px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .contact-info {
+    font-size: 1rem;
+    gap: 1rem;
+  }
+}
