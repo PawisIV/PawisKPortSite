@@ -867,3 +867,130 @@ footer {
   cursor: default;
 }
 .in-detail-img { cursor: zoom-in; }
+.project-page main { max-width: 860px; }
+ 
+    /* ── Game selector tabs (top level) ── */
+    .gj-selector {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .gj-sel-btn {
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 20px;
+      border-radius: 6px;
+      border: 1px solid #333;
+      background: transparent;
+      color: #777;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .gj-sel-btn:hover { border-color: var(--highlight); color: var(--highlight); }
+    .gj-sel-btn.on { border-color: var(--highlight); color: var(--highlight); background: rgba(63,169,245,0.08); }
+ 
+    /* ── Game panel ── */
+    .gj-panel { display: none; }
+    .gj-panel.on { display: block; }
+ 
+    /* ── Game header: image + info ── */
+    .gj-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    @media (max-width: 600px) { .gj-top { grid-template-columns: 1fr; } }
+ 
+    .gj-img {
+      width: 100%;
+      border: 2px solid #333;
+      border-radius: 8px;
+      display: block;
+      transition: border-color 0.3s;
+      cursor: zoom-in;
+    }
+    .gj-img:hover { border-color: var(--highlight); }
+ 
+    /* Info table */
+    .gj-info { border: 1px solid #2a2a2a; border-radius: 6px; overflow: hidden; }
+    .gj-ir { display: grid; grid-template-columns: 110px 1fr; border-bottom: 1px solid #1e1e1e; }
+    .gj-ir:last-child { border-bottom: none; }
+    .gj-il { font-size: 11px; font-weight: 600; color: var(--highlight); padding: 7px 10px; background: #161616; border-right: 1px solid #2a2a2a; }
+    .gj-iv { font-size: 11px; color: var(--text); padding: 7px 10px; }
+ 
+    /* ── Sections ── */
+    .gj-sec { margin-top: 2rem; }
+    .gj-sec-title {
+      color: var(--highlight);
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .gj-sec p { font-size: 0.95rem; margin-bottom: 0.8rem; }
+ 
+    /* ── Problem list ── */
+    .gj-problems { list-style: none; padding: 0; margin: 0; }
+    .gj-problem {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 12px;
+    }
+    .gj-problem-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 3px;
+    }
+    .gj-problem-label.prob { color: #e06c6c; }
+    .gj-problem-label.fix  { color: #6cbfe0; }
+    .gj-problem-label.learn { color: #6ce0a0; }
+    .gj-problem p { font-size: 0.9rem; margin: 0 0 10px; }
+    .gj-problem p:last-child { margin-bottom: 0; }
+ 
+    /* ── Divider between games ── */
+    .gj-divider { border: none; border-top: 1px solid #222; margin: 2.5rem 0; }
+ 
+    /* ── Lightbox ── */
+    .lb-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+    .lb-overlay.open { display: flex; }
+    .lb-overlay img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 6px;
+      object-fit: contain;
+      cursor: default;
+    }
+	
+	.gj-itchio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: 1px solid var(--highlight);
+  color: var(--highlight);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.gj-itchio:hover { background: rgba(63,169,245,0.12); text-decoration: none; }
