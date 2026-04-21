@@ -847,3 +847,23 @@ footer {
     .in-detail-img:hover { border-color: var(--highlight); }
     .in-detail-cap { font-size: 12px; color: #555; text-align: center; margin-bottom: 1.2rem; }
     .in-hr { border: none; border-top: 1px solid #2a2a2a; margin: 1.6rem 0; }
+
+.lb-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 6px;
+  object-fit: contain;
+  cursor: default;
+}
+.in-detail-img { cursor: zoom-in; }

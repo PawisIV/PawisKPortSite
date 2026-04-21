@@ -114,7 +114,7 @@ Learned how to balance enemy encounters by tuning monster counts, enemy types,
       <div class="in-tabs">
         <button class="in-tab on"  data-tab="level">Level design</button>
         <button class="in-tab" data-tab="content">Content design</button>
-        <button class="in-tab" data-tab="quest">Quest design</button>
+        <button class="in-tab" data-tab="quest">System design</button>
         <button class="in-tab" data-tab="balance">Balancing</button>
         <button class="in-tab" data-tab="monster">Monster design</button>
         <button class="in-tab" data-tab="ux">UX design</button>
@@ -150,61 +150,108 @@ Learned how to balance enemy encounters by tuning monster counts, enemy types,
 
 </div><!-- /tab-level -->
  
-      <!-- CONTENT DESIGN -->
-      <div class="in-tc" id="tab-content">
-        <p><!-- Overview of your content design work. --></p>
-        <h4><!-- Sub-section heading --></h4>
-        <p><!-- Detail --></p>
-        <ul>
-          <li><!-- Task --></li>
-          <li><!-- Task --></li>
-        </ul>
-      </div>
+<div class="in-tc" id="tab-content">
+
+  <p>Assigned to design new content to increase gameplay variety and keep the experience engaging, by both improving existing mechanics and identifying opportunities to bring new systems into the game.</p>
+
+  <h4>What I worked on</h4>
+  <ul>
+    <li><strong>Character Abilities</strong>: Designed ultimate abilities for the main playable characters, focusing on giving each a distinct playstyle such as combo-focused, zone control, and burst damage.</li>
+    <li><strong>Objective Variety</strong>: Designed secondary in-level objectives including base defense, resource collection, and elite enemy elimination to add variety to each run.</li>
+  </ul>
+
+  <h4>Process</h4>
+  <p>Studied the existing GDD to analyze what gameplay styles could still be added to make the game more fun without making it feel unfocused or overcrowded with systems.</p>
+  <ul>
+    <li><strong>Character Abilities</strong>: Identified each character's strengths and weaknesses, then decided whether to amplify their strengths or compensate for their weaknesses when designing the ability.</li>
+    <li><strong>Objective Variety</strong>: Referenced objectives and missions from other games, then proposed to the team how the mechanics could be adapted to fit our game's existing systems.</li>
+  </ul>
+
+</div><!-- /tab-content -->
  
-      <!-- QUEST DESIGN -->
-      <div class="in-tc" id="tab-quest">
-        <p><!-- Overview of your quest design work. --></p>
-        <h4><!-- Sub-section heading --></h4>
-        <p><!-- Detail --></p>
-        <ul>
-          <li><!-- Task --></li>
-          <li><!-- Task --></li>
-        </ul>
-      </div>
+     <!-- SYSTEM DESIGN -->
+<div class="in-tc" id="tab-quest">
+
+  <p>Assigned to design game systems that required mathematical formulas to make them repeatable and adjustable, including systems designed to integrate with the Steam platform.</p>
+
+  <h4>What I worked on</h4>
+  <ul>
+    <li><strong>Progression and Quest System</strong>: Designed the structure of a repeatable quest system, including dynamic difficulty formulas and unlock conditions tied to player progression.</li>
+    <li><strong>Steam Achievement Integration</strong>: Planned and defined unlock conditions for Steam Achievements to align with Steam's technical requirements.</li>
+    <li><strong>Dialog Data Setup</strong> — Prepared NPC dialog data from the narrative team and integrated it into the game, including setting up data structure for localization support.</li>
+  </ul>
+
+  <h4>Process</h4>
+  <p>Studied Steam's platform requirements and proposed the necessary systems and variables to the development team so the game could properly communicate with the platform. Also researched calculation principles that allow a single formula to be reused while adjusting values based on randomized parameters within the design constraints.</p>
+  <ul>
+    <li><strong>Progression and Quest System</strong>: Researched and tested a dynamic difficulty formula (Quest Formula) to improve replayability, and designed questline unlock conditions based on player progress milestones.</li>
+    <li><strong>Steam Achievement Integration</strong>: Researched Steam Achievement requirements and defined the variable types that affect unlock conditions across different formats. Assigned API names to each achievement for platform communication.</li>
+    <li><strong>Dialog Data Setup</strong>: Designed the data structure for the development team, then integrated dialog entries into the Dialog Manager system, organizing conversations into sequences for proper playback order.</li>
+  </ul>
+<h4>Quest formula</h4>
+  <img src="../images/Quest.png" alt="Player flow chart" class="in-detail-img" />
+  <div class="in-detail-cap">Quest formula example</div>
+</div><!-- /tab-quest -->
  
-      <!-- BALANCING -->
-      <div class="in-tc" id="tab-balance">
-        <p><!-- Overview of your balancing work. --></p>
-        <h4><!-- Sub-section heading --></h4>
-        <p><!-- Detail --></p>
-        <ul>
-          <li><!-- Task --></li>
-          <li><!-- Task --></li>
-        </ul>
-      </div>
+<!-- BALANCING -->
+<div class="in-tc" id="tab-balance">
+
+  <p>Supported the balancing side of the game with a focus on enemy encounter tuning and preparing the game for a public demo.</p>
+
+  <h4>What I worked on</h4>
+  <ul>
+    <li>Defined monster wave composition for each objective, including the number of enemies, number of waves, and enemy types, as well as designating elite objective encounters.</li>
+    <li>Worked on game balancing that was used in the Thailand Game Show 2025 demo.</li>
+  </ul>
+
+</div><!-- /tab-balance -->
  
-      <!-- MONSTER DESIGN -->
-      <div class="in-tc" id="tab-monster">
-        <p><!-- Overview of your monster moveset and behavior design work. --></p>
-        <h4><!-- Sub-section heading --></h4>
-        <p><!-- Detail --></p>
-        <ul>
-          <li><!-- Task --></li>
-          <li><!-- Task --></li>
-        </ul>
-      </div>
+<!-- MONSTER DESIGN -->
+<div class="in-tc" id="tab-monster">
+
+  <p>Designed enemy movesets and AI behaviors for monsters in the game, focusing on giving each enemy type a distinct identity that fits the combat system.</p>
+
+  <h4>What I worked on</h4>
+  <ul>
+    <li><strong>Enemy Behavior Design</strong>: Designed attack movesets and AI behavior patterns for monsters, covering a range of archetypes such as slow heavy hitters, fast aggressors, and support types.</li>
+  </ul>
+
+  <h4>Process</h4>
+  <p>Started by defining what kind of attack patterns were needed, then researched enemies from other games that matched those goals. After establishing each monster's behavior profile, the reference material was presented to the team to guide the technical implementation and animation direction.</p>
+
+<h4>MonsterA Design</h4>
+  <img src="../images/MonsterA.png" alt="Level layout design" class="in-detail-img" />
+  <div class="in-detail-cap">Monster A moveset and behavior</div>
+
+  <h4>BossA Design</h4>
+  <img src="../images/BossA.png" alt="Player flow chart" class="in-detail-img" />
+  <div class="in-detail-cap">Boss A Behavior and phase</div>
+</div><!-- /tab-monster -->
  
-      <!-- UX DESIGN -->
-      <div class="in-tc" id="tab-ux">
-        <p><!-- Overview of your UX design work. --></p>
-        <h4><!-- Sub-section heading --></h4>
-        <p><!-- Detail --></p>
-        <ul>
-          <li><!-- Task --></li>
-          <li><!-- Task --></li>
-        </ul>
-      </div>
- 
+    <!-- UX DESIGN -->
+<div class="in-tc" id="tab-ux">
+
+  <p>Created UI design mockups for the UX/UI team to work from, focusing on defining what information and elements each screen needed to present to the player.</p>
+
+  <h4>What I worked on</h4>
+  <ul>
+    <li><strong>Result Screen Mockup</strong>: Designed the flow of the result screen layout covering different end-of-run scenarios.</li>
+    <li><strong>Skill Overview Mockup</strong>: Designed a skill overview screen to clearly communicate each character's abilities to the player.</li>
+  </ul>
+
+  <h4>Process</h4>
+  <p>Referenced UI from various games and selected elements worth adapting into the design, then presented the mockups to the UX/UI team as a handoff for further development.</p>
+  <ul>
+    <li><strong>Result Screen Mockup</strong>: Studied similar genre games and summarized what information should be shown, such as upgrades and builds from that run, play time, and other player profile data.</li>
+    <li><strong>Skill Overview Mockup</strong>: Referenced hero shooter games such as Overwatch and Marvel Rivals, as they share a similar structure where players select a character and all characters share the same basic input layout, making them a strong reference for how to present skill information clearly.</li>
+  </ul>
+  <h4>Skill Overview Design</h4>
+  <img src="../images/Skill.png" alt="Level layout design" class="in-detail-img" />
+  <div class="in-detail-cap">Skill Overview mock up</div>
+  <h4>Result Screen Flow</h4>
+  <img src="../images/ResultFlow.png" alt="Level layout design" class="in-detail-img" />
+  <div class="in-detail-cap">Result Screen Flow mock up</div>
+</div><!-- /tab-ux -->
     </div><!-- /in-detail-wrap -->
  
   </main>
@@ -222,6 +269,28 @@ Learned how to balance enemy encounters by tuning monster counts, enemy types,
         document.getElementById('tab-' + tab.dataset.tab).classList.add('on');
       };
     });
+	// Lightbox
+const overlay = document.createElement('div');
+overlay.className = 'lb-overlay';
+const lbImg = document.createElement('img');
+overlay.appendChild(lbImg);
+document.body.appendChild(overlay);
+
+document.querySelectorAll('.in-detail-img').forEach(img => {
+  img.onclick = () => {
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    overlay.classList.add('open');
+  };
+});
+
+overlay.onclick = (e) => {
+  if (e.target === overlay) overlay.classList.remove('open');
+};
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') overlay.classList.remove('open');
+});
   </script>
  
 </body>

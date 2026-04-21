@@ -295,6 +295,28 @@ The remainder of this page highlights my key contributions.
         document.getElementById('tab-' + tab.dataset.tab).classList.add('on');
       };
     });
+	// Lightbox
+const overlay = document.createElement('div');
+overlay.className = 'lb-overlay';
+const lbImg = document.createElement('img');
+overlay.appendChild(lbImg);
+document.body.appendChild(overlay);
+
+document.querySelectorAll('.pw-detail-img').forEach(img => {
+  img.onclick = () => {
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    overlay.classList.add('open');
+  };
+});
+
+overlay.onclick = (e) => {
+  if (e.target === overlay) overlay.classList.remove('open');
+};
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') overlay.classList.remove('open');
+});
   </script>
  
 </body>
