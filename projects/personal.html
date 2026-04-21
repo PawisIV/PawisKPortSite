@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>Pawis Kitsanawan</h1>
-    <p class="tagline"><h2><h>Game Designer</h></h2></p>
+    <p class="tagline"><h2><h>Game Designer</h2></p>
 <nav>
   <a href="/PawisKPortSite/">Home</a>
 
@@ -28,17 +28,251 @@
 
 
   </header>
-
-  <main>
+<main>
     <section>
-      <h2>Personal Project</h2>
-      <p><strong>[Game Title]</strong> — Describe your personal project here: genre, goals, design philosophy, and what challenges you solved.</p>
-      <p>Mention key tools (Unity, Unreal, Godot, etc.), team size (if any), and what insights you gained.</p>
+      <h2>APEX PREDATOR</h2>  <!-- ← change this -->
     </section>
+ 
+    <div class="pw-cols">
+ 
+      <!-- ── LEFT: slider + info ─────────────────────────────────── -->
+      <div>
+ 
+        <!-- IMAGE SLIDER
+             Add as many <div class="pw-slide"> blocks as you have screenshots.
+             The JS below auto-counts them and builds the dots. -->
+        <div class="pw-slider" id="slider">
+          <div class="pw-slides" id="slides">
+ 
+            <!-- Slide 1 -->
+            <div class="pw-slide">
+              <img src="../images/Apex1.png" alt="Brief description" />
+              <div class="pw-slide-cap">Caption for screenshot 1</div>
+            </div>
+ 
+            <!-- Slide 2 -->
+            <div class="pw-slide">
+              <img src="/PawisKPortSite/images/YOUR-SCREENSHOT-2.jpg" alt="Brief description" />
+              <div class="pw-slide-cap">Caption for screenshot 2</div>
+            </div>
+ 
+            <!-- Slide 3 -->
+            <div class="pw-slide">
+              <img src="/PawisKPortSite/images/YOUR-SCREENSHOT-3.jpg" alt="Brief description" />
+              <div class="pw-slide-cap">Caption for screenshot 3</div>
+            </div>
+ 
+            <!-- Add more slides by copy-pasting a block above ↑ -->
+ 
+          </div>
+          <button class="pw-arr pw-arr-l" id="prevBtn">&#8249;</button>
+          <button class="pw-arr pw-arr-r" id="nextBtn">&#8250;</button>
+          <div class="pw-dots" id="dots"></div>
+        </div>
+ 
+        <!-- INFO TABLE — fill in your project details -->
+        <div class="pw-info">
+          <div class="pw-ir"><div class="pw-il">Platform</div><div class="pw-iv"><!-- e.g. Windows PC, WebGL, Mobile --></div></div>
+          <div class="pw-ir"><div class="pw-il">Engine</div><div class="pw-iv"><!-- e.g. Unity, Unreal, Godot --></div></div>
+          <div class="pw-ir"><div class="pw-il">Language</div><div class="pw-iv"><!-- e.g. C#, GDScript, Blueprints --></div></div>
+          <div class="pw-ir"><div class="pw-il">Tools</div><div class="pw-iv"><!-- e.g. Photoshop, Blender, Figma --></div></div>
+          <div class="pw-ir"><div class="pw-il">Duration</div><div class="pw-iv"><!-- e.g. 3 months --></div></div>
+          <div class="pw-ir"><div class="pw-il">Completion</div><div class="pw-iv"><!-- e.g. 2024 --></div></div>
+          <div class="pw-ir"><div class="pw-il">Team size</div><div class="pw-iv"><!-- e.g. 1 or 4 --></div></div>
+          <div class="pw-ir"><div class="pw-il">Role</div><div class="pw-iv"><!-- e.g. Game Designer, Programmer, Artist --></div></div>
+        </div>
+ 
+      </div><!-- /left -->
+ 
+      <!-- ── RIGHT: overview, goals, video, download ─────────────── -->
+      <div>
+ 
+        <!-- OVERVIEW -->
+        <div class="pw-sec">
+          <div class="pw-sec-title">Overview</div>
+          <p><!-- Describe your project here. What is it? What genre? What's the story or concept? --></p>
+          <p><!-- Add a second paragraph if needed, e.g. your role or what makes it unique. --></p>
+        </div>
+ 
+        <!-- DESIGN GOALS -->
+        <div class="pw-sec">
+          <div class="pw-sec-title">Design goals</div>
+          <ul class="pw-goals">
+            <li><!-- Goal 1 --></li>
+            <li><!-- Goal 2 --></li>
+            <li><!-- Goal 3 --></li>
+            <li><!-- Add or remove list items as needed --></li>
+          </ul>
+        </div>
+ 
+        <!-- VIDEO PREVIEW
+             If you have no video, delete this whole pw-sec block. -->
+        <div class="pw-sec">
+          <div class="pw-sec-title">Video preview</div>
+          <div class="pw-vid" id="videoWrap">
+            <video id="gameVideo" preload="none" poster="../images/YOUR-VIDEO-THUMBNAIL.jpg">
+              <source src="/PawisKPortSite/images/YOUR-VIDEO.mp4" type="video/mp4">
+            </video>
+            <div class="pw-play"><div class="pw-play-tri"></div></div>
+          </div>
+        </div>
+ 
+        <!-- DOWNLOAD BUTTONS
+             Remove any button you don't need. -->
+        <div class="pw-sec">
+          <div class="pw-sec-title">Download</div>
+          <div class="pw-dl">
+            <a href="/PawisKPortSite/images/YOUR-GAME-FILE.exe" class="pw-btn">&#8659; Download game</a>
+            <a href="/PawisKPortSite/images/YOUR-GDD.pdf" class="pw-btn">&#128196; Design doc (PDF)</a>
+          </div>
+          <p style="font-size:12px; color:#555; margin-top:8px;"><!-- Optional note, e.g. Windows only, browser required, etc. --></p>
+        </div>
+ 
+      </div><!-- /right -->
+    </div><!-- /pw-cols -->
+ 
+ 
+    <!-- ── FULL-WIDTH DESIGN DETAIL ─────────────────────────────── -->
+    <!-- Add, rename, or remove tabs to match your project.
+         Each tab needs:
+           1. A <button class="pw-tab" data-tab="TABNAME"> in .pw-tabs
+           2. A <div class="pw-tc" id="tab-TABNAME"> below              -->
+    <div class="pw-detail-wrap">
+      <div class="pw-detail-title">Design detail</div>
+ 
+      <div class="pw-tabs">
+        <button class="pw-tab on" data-tab="tab1">Tab 1 title</button>   <!-- ← rename -->
+        <button class="pw-tab" data-tab="tab2">Tab 2 title</button>      <!-- ← rename -->
+        <!-- <button class="pw-tab" data-tab="tab3">Tab 3 title</button> -->
+      </div>
+ 
+      <!-- TAB 1 CONTENT -->
+      <div class="pw-tc on" id="tab-tab1">
+        <p><!-- Opening paragraph for this section. --></p>
+ 
+        <!-- Two side-by-side info cards -->
+        <div class="pw-card-grid">
+          <div class="pw-card">
+            <h4>Card title</h4>
+            <p><!-- Detail text --></p>
+          </div>
+          <div class="pw-card">
+            <h4>Card title</h4>
+            <p><!-- Detail text --></p>
+          </div>
+        </div>
+ 
+        <!-- Full-width screenshot — remove if not needed -->
+        <img src="/PawisKPortSite/images/YOUR-DETAIL-SCREENSHOT.jpg" alt="Description" class="pw-detail-img" />
+        <div class="pw-detail-cap">Caption for the image above</div>
+ 
+        <hr class="pw-hr" />
+ 
+        <!-- Another card grid row — remove if not needed -->
+        <div class="pw-card-grid">
+          <div class="pw-card">
+            <h4>Card title</h4>
+            <p><!-- Detail text --></p>
+          </div>
+          <div class="pw-card">
+            <h4>Card title</h4>
+            <p><!-- Detail text --></p>
+          </div>
+        </div>
+ 
+        <p><!-- Closing paragraph for this tab. --></p>
+      </div><!-- /tab-tab1 -->
+ 
+      <!-- TAB 2 CONTENT -->
+      <div class="pw-tc" id="tab-tab2">
+        <p><!-- Opening paragraph for this section. --></p>
+ 
+        <div class="pw-card-grid">
+          <div class="pw-card">
+            <h4>Card title</h4>
+            <p><!-- Detail text --></p>
+          </div>
+          <div class="pw-card">
+            <h4>Card title</h4>
+            <p><!-- Detail text --></p>
+          </div>
+        </div>
+ 
+        <img src="/PawisKPortSite/images/YOUR-DETAIL-SCREENSHOT-2.jpg" alt="Description" class="pw-detail-img" />
+        <div class="pw-detail-cap">Caption for the image above</div>
+ 
+        <hr class="pw-hr" />
+ 
+        <div class="pw-card-grid">
+          <div class="pw-card">
+            <h4>Card title</h4>
+            <p><!-- Detail text --></p>
+          </div>
+          <div class="pw-card">
+            <h4>Card title</h4>
+            <p><!-- Detail text --></p>
+          </div>
+        </div>
+ 
+        <p><!-- Closing paragraph for this tab. --></p>
+      </div><!-- /tab-tab2 -->
+ 
+      <!-- TAB 3 (uncomment if needed)
+      <div class="pw-tc" id="tab-tab3">
+        <p></p>
+      </div> -->
+ 
+    </div><!-- /pw-detail-wrap -->
+ 
   </main>
-
+ 
   <footer>
-    <p>© 2024 Pawis Kitsanawan</p>
+    <p>&copy; 2024 Pawis Kitsanawan</p>
   </footer>
+ 
+  <script>
+    // ── Image Slider ──────────────────────────────────────
+    const slides = document.getElementById('slides');
+    const dotsEl = document.getElementById('dots');
+    const totalSlides = document.querySelectorAll('.pw-slide').length;
+    let current = 0;
+ 
+    for (let i = 0; i < totalSlides; i++) {
+      const d = document.createElement('button');
+      d.className = 'pw-dot' + (i === 0 ? ' on' : '');
+      d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      d.onclick = () => goTo(i);
+      dotsEl.appendChild(d);
+    }
+    function goTo(n) {
+      current = (n + totalSlides) % totalSlides;
+      slides.style.transform = 'translateX(-' + (current * 100) + '%)';
+      document.querySelectorAll('.pw-dot').forEach((d, i) => d.classList.toggle('on', i === current));
+    }
+    document.getElementById('prevBtn').onclick = () => goTo(current - 1);
+    document.getElementById('nextBtn').onclick = () => goTo(current + 1);
+ 
+    // ── Video toggle ──────────────────────────────────────
+    const videoWrap = document.getElementById('videoWrap');
+    const gameVideo = document.getElementById('gameVideo');
+    if (videoWrap && gameVideo) {
+      videoWrap.onclick = () => {
+        if (gameVideo.paused) { gameVideo.play(); videoWrap.classList.add('playing'); }
+        else { gameVideo.pause(); videoWrap.classList.remove('playing'); }
+      };
+    }
+ 
+    // ── Design detail tabs ────────────────────────────────
+    document.querySelectorAll('.pw-tab').forEach(tab => {
+      tab.onclick = () => {
+        document.querySelectorAll('.pw-tab').forEach(t => t.classList.remove('on'));
+        document.querySelectorAll('.pw-tc').forEach(t => t.classList.remove('on'));
+        tab.classList.add('on');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('on');
+      };
+    });
+  </script>
+ 
 </body>
 </html>
+
