@@ -727,3 +727,123 @@ footer {
       border-top: 1px solid #2a2a2a;
       margin: 1.6rem 0;
     }
+
+ .project-page main { max-width: 860px; }
+ 
+    /* ── Top block: image + info side by side ── */
+    .in-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 1.5rem;
+      align-items: start;
+    }
+    @media (max-width: 640px) { .in-top { grid-template-columns: 1fr; } }
+ 
+    .in-img {
+      width: 100%;
+      border: 2px solid #333;
+      border-radius: 8px;
+      display: block;
+      transition: border-color 0.3s;
+    }
+    .in-img:hover { border-color: var(--highlight); }
+ 
+    /* Steam button */
+    .in-steam {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 8px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--highlight);
+      color: var(--highlight);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .in-steam:hover { background: rgba(63,169,245,0.12); text-decoration: none; }
+ 
+    /* Info table */
+    .in-info { border: 1px solid #2a2a2a; border-radius: 6px; overflow: hidden; }
+    .in-ir { display: grid; grid-template-columns: 100px 1fr; border-bottom: 1px solid #1e1e1e; }
+    .in-ir:last-child { border-bottom: none; }
+    .in-il { font-size: 11px; font-weight: 600; color: var(--highlight); padding: 7px 10px; background: #161616; border-right: 1px solid #2a2a2a; }
+    .in-iv { font-size: 11px; color: var(--text); padding: 7px 10px; }
+ 
+    /* ── Overview + internship info ── */
+    .in-sec { margin-top: 2rem; }
+    .in-sec-title {
+      color: var(--highlight);
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .in-sec p { font-size: 0.95rem; margin-bottom: 0.8rem; }
+ 
+    /* Duration highlight box */
+    .in-duration {
+      display: inline-block;
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 0.95rem;
+      color: var(--highlight);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+ 
+    /* ── Tabs (same style as personal page) ── */
+    .in-detail-wrap {
+      margin-top: 2.5rem;
+      border-top: 1px solid #333;
+      padding-top: 1.5rem;
+    }
+    .in-detail-title {
+      color: var(--highlight);
+      font-size: 1.6rem;
+      font-weight: 700;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.4rem;
+    }
+    .in-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #333;
+      margin-bottom: 1.4rem;
+    }
+    .in-tab {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: #777;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+    }
+    .in-tab.on { color: var(--highlight); border-bottom-color: var(--highlight); }
+    .in-tc { display: none; }
+    .in-tc.on { display: block; }
+ 
+    /* Free-form content inside tabs */
+    .in-tc p { font-size: 0.95rem; margin-bottom: 0.9rem; }
+    .in-tc h4 { color: var(--highlight); font-size: 1.05rem; font-weight: 600; margin: 1.4rem 0 0.4rem; }
+    .in-tc h4:first-child { margin-top: 0; }
+    .in-tc ul, .in-tc ol { padding-left: 20px; margin: 0 0 0.9rem; }
+    .in-tc li { font-size: 0.95rem; color: var(--text); line-height: 1.7; margin-bottom: 3px; }
+    .in-tc ul ul { margin: 4px 0 4px; }
+ 
+    /* Images inside tabs */
+    .in-detail-img { width: 100%; border: 2px solid #333; border-radius: 8px; display: block; margin: 0.8rem 0 0.3rem; transition: border-color 0.3s; }
+    .in-detail-img:hover { border-color: var(--highlight); }
+    .in-detail-cap { font-size: 12px; color: #555; text-align: center; margin-bottom: 1.2rem; }
+    .in-hr { border: none; border-top: 1px solid #2a2a2a; margin: 1.6rem 0; }

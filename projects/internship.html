@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>Pawis Kitsanawan</h1>
-    <p class="tagline"><h2><h>Game Designer</h2></p>
+    <p class="tagline"><h2>Game Designer</h2></p>
 <nav>
   <a href="/PawisKPortSite/">Home</a>
 
@@ -29,16 +29,200 @@
 
   </header>
 
-  <main>
+<main>
     <section>
-      <h2>Internship Project</h2>
-      <p><strong>Project Title</strong> — A description of your internship experience, studio, or company. Explain your primary tasks, design responsibilities, and major features you contributed to.</p>
-      <p>You may include images from the <code>/images</code> folder, detailed design notes, or embedded videos later.</p>
+      <h2>Father, Son & Holy Gun</h2>  <!-- ← change -->
     </section>
-  </main>
+ 
+    <!-- ── TOP: image + info table ── -->
+    <div class="in-top">
+ 
+      <!-- Left: game image + Steam link -->
+      <div>
+        <img src="../images/fatherson.jpg" alt="Game title" class="in-img" />
+        <a href="https://store.steampowered.com/app/2840880/Father_Son__Holy_Guns/" class="in-steam" target="_blank">
+          &#9658; View on Steam
+        </a>
+      </div>
+ 
+      <!-- Right: info table -->
+      <div class="in-info">
+        <div class="in-ir"><div class="in-il">Genre</div><div class="in-iv">Multiplayer, RogueLite, Action RPG, Isometric View</div></div>
+        <div class="in-ir"><div class="in-il">Platform</div><div class="in-iv">Windows PC</div></div>
+        <div class="in-ir"><div class="in-il">Engine</div><div class="in-iv">Unity</div></div>
+        <div class="in-ir"><div class="in-il">Studio</div><div class="in-iv">Jumbo Jumps</div></div>
+        <div class="in-ir"><div class="in-il">My role</div><div class="in-iv">Game Designer (Intern)</div></div>
+        <div class="in-ir"><div class="in-il">Released</div><div class="in-iv">To be announced</div></div>
+      </div>
+ 
+    </div><!-- /in-top -->
+ 
+    <!-- ── OVERVIEW ── -->
+    <div class="in-sec">
+      <div class="in-sec-title">Overview</div>
+      <p>Father, Son and Holy Guns is a fast-paced roguelite multiplayer game set in a bizarre world where faith fuels firepower and every run tests your sanity!</p>
+      <p>When our gods hear no prayer, only bullets are the answer. Join the crusade against aliens as one of the Gunsaders of the Church. Team up with friends online and embark on holy missions to fend off the frantic hordes of cosmic horror, inspired by Lovecraft mythos. Burn the sinners. Extract the human-oil. And prove your faith to the Church Of Humanity.</p>
+    </div>
+ 
+    <!-- ── INTERNSHIP INFO ── -->
+    <div class="in-sec">
+      <div class="in-sec-title">Internship</div>
+      <div class="in-duration">&#128197; June 2025 – March 2026 (8 months)</div>
+      <p>
+	  Jumbo Jumps Co., Ltd. is a Thai indie game studio based in Bangkok.
+	  During my internship I was involved across multiple areas of game design,
+	  from designing and balancing game systems to creating new content, level design, and UX mockups.
+	  </p>
+    </div>
+ 
+    <!-- ── WHAT I GOT ── -->
+    <div class="in-sec">
+      <div class="in-sec-title">Key Takeaway</div>
+      <p><!-- Reflect on what you learned and took away from this internship. Skills, mindset, industry knowledge, etc. --></p>
+      <ul>
+        <li><strong>Game Reference Analysis</strong>
+Gained an understanding of how to search for and analyze references from a wide variety of games,
+ then apply those insights to design game mechanics that fit the project's systems. 
+ This allowed me to adapt concepts from different genres into the design appropriately.</li>
+        <li><strong>Quest Design Structure</strong></li> 
+Developed an understanding of the project's quest structure and design formula, 
+including quest unlock conditions, objective formats, and mission flow sequence.
+        <li><strong>Data-Driven Design</strong></li> Through working with NPC dialog data and adjusting various in-game values, 
+		I gained an understanding of data-driven design, how to manage game data systematically and make 
+		it easier to tweak and iterate on values without reworking the underlying logic.
+		<li><strong>Level Design Analysis</strong></li> By participating in level analysis and design, such as defining map patterns,
+		placing objectives, and composing map layouts, I developed an appreciation for player flow and how environmental 
+		arrangement supports the player's overall experience.
+		<li><strong>Enemy and Combat Design</strong></li> 
+Designing monsters, elites, and gatekeepers gave me a deeper understanding of enemy behavior design, 
+how to give each enemy type a distinct identity, and how to shape attack patterns and difficulty to suit the game's combat system.
+		<li><strong>Gameplay Balancing</strong></li>
+Learned how to balance enemy encounters by tuning monster counts, enemy types,
+ and wave spawn patterns to create appropriate difficulty and a satisfying challenge for players.
+		<li><strong>Game Development Workflow</strong></li>Working alongside the development team on a real project gave me 
+		insight into the game dev pipeline, including writing design documents, using a ticket system to track tasks, 
+		and how communication flows within a team.
+      </ul>
+    </div>
+ 
+    <!-- ── WORK DETAIL TABS ── -->
+    <div class="in-detail-wrap">
+      <div class="in-detail-title">What I did</div>
+ 
+      <!-- Add or remove tab buttons to match your work.
+           Each button's data-tab must match its content div's id (without "tab-") -->
+      <div class="in-tabs">
+        <button class="in-tab on"  data-tab="level">Level design</button>
+        <button class="in-tab" data-tab="content">Content design</button>
+        <button class="in-tab" data-tab="quest">Quest design</button>
+        <button class="in-tab" data-tab="balance">Balancing</button>
+        <button class="in-tab" data-tab="monster">Monster design</button>
+        <button class="in-tab" data-tab="ux">UX design</button>
+      </div>
+ 
+<!-- LEVEL DESIGN -->
+<div class="in-tc on" id="tab-level">
 
+  <p>Assigned to design levels for the game, as well as playtest and provide feedback on existing maps. This included a key structural analysis that led to shifting the entire map architecture from an Open Area layout to a Modular Island system, a change agreed upon by the full team, as Open Area maps were difficult to control in terms of player navigation and monster placement. Modular Islands proved to be the better long-term solution.</p>
+
+  <h4>What I worked on</h4>
+  <ul>
+    <li><strong>Modular Map System:</strong> Analyzed and proposed the shift from Open Area to Modular Islands, improving asset reuse efficiency and enabling more precise control over player flow.</li>
+    <li><strong>Biome Construction (Biome 2):</strong> Designed the layout for a Snow/Ice Biome, including Points of Interest (POI), enemy spawn points, and objective placement.</li>
+    <li><strong>Navigation Design:</strong> Defined bridge crossing behavior and jump point placement to align with the game's camera angle and movement feel.</li>
+  </ul>
+
+  <h4>Process</h4>
+  <p>Referenced other Rogue-like games such as Hades 1 &amp; 2, Ravenswatch, Dead Cells, and Metroidvania titles to inform pacing decisions. Coordinated closely with the development team on mechanics throughout the process.</p>
+  <ul>
+    <li><strong>Modular Map System:</strong> Prepared a report document presented to the Lead Designer and developers, outlining the advantages of switching to Modular Islands: better asset reuse (one island built, reused across maps) and clearly defined combat zones.</li>
+    <li><strong>Biome Construction (Biome 2):</strong> Designed the layout by referencing the updated Biome 1 Modular Island structure, then identifying what gameplay styles were still missing. For example, adding a semi-open island that delivers a similar experience to the original design but is easier to manage.</li>
+    <li><strong>Navigation Design:</strong> Defined walking routes and established Main Paths and Sub Paths to determine where bridges should be placed and what type each should be.</li>
+  </ul>
+
+  <h4>Level Layout</h4>
+  <img src="../images/biome2.png" alt="Level layout design" class="in-detail-img" />
+  <div class="in-detail-cap">Biome 2: Snow/Ice level layout design</div>
+
+  <h4>Player Flow Chart</h4>
+  <img src="../images/playerflowfatherson.png" alt="Player flow chart" class="in-detail-img" />
+  <div class="in-detail-cap">Player flow diagram</div>
+
+</div><!-- /tab-level -->
+ 
+      <!-- CONTENT DESIGN -->
+      <div class="in-tc" id="tab-content">
+        <p><!-- Overview of your content design work. --></p>
+        <h4><!-- Sub-section heading --></h4>
+        <p><!-- Detail --></p>
+        <ul>
+          <li><!-- Task --></li>
+          <li><!-- Task --></li>
+        </ul>
+      </div>
+ 
+      <!-- QUEST DESIGN -->
+      <div class="in-tc" id="tab-quest">
+        <p><!-- Overview of your quest design work. --></p>
+        <h4><!-- Sub-section heading --></h4>
+        <p><!-- Detail --></p>
+        <ul>
+          <li><!-- Task --></li>
+          <li><!-- Task --></li>
+        </ul>
+      </div>
+ 
+      <!-- BALANCING -->
+      <div class="in-tc" id="tab-balance">
+        <p><!-- Overview of your balancing work. --></p>
+        <h4><!-- Sub-section heading --></h4>
+        <p><!-- Detail --></p>
+        <ul>
+          <li><!-- Task --></li>
+          <li><!-- Task --></li>
+        </ul>
+      </div>
+ 
+      <!-- MONSTER DESIGN -->
+      <div class="in-tc" id="tab-monster">
+        <p><!-- Overview of your monster moveset and behavior design work. --></p>
+        <h4><!-- Sub-section heading --></h4>
+        <p><!-- Detail --></p>
+        <ul>
+          <li><!-- Task --></li>
+          <li><!-- Task --></li>
+        </ul>
+      </div>
+ 
+      <!-- UX DESIGN -->
+      <div class="in-tc" id="tab-ux">
+        <p><!-- Overview of your UX design work. --></p>
+        <h4><!-- Sub-section heading --></h4>
+        <p><!-- Detail --></p>
+        <ul>
+          <li><!-- Task --></li>
+          <li><!-- Task --></li>
+        </ul>
+      </div>
+ 
+    </div><!-- /in-detail-wrap -->
+ 
+  </main>
+ 
   <footer>
-    <p>© 2024 Pawis Kitsanawan</p>
+    <p>&copy; 2024 Pawis Kitsanawan</p>
   </footer>
+ 
+  <script>
+    document.querySelectorAll('.in-tab').forEach(tab => {
+      tab.onclick = () => {
+        document.querySelectorAll('.in-tab').forEach(t => t.classList.remove('on'));
+        document.querySelectorAll('.in-tc').forEach(t => t.classList.remove('on'));
+        tab.classList.add('on');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('on');
+      };
+    });
+  </script>
+ 
 </body>
 </html>
