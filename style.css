@@ -994,3 +994,129 @@ footer {
   transition: background 0.2s;
 }
 .gj-itchio:hover { background: rgba(63,169,245,0.12); text-decoration: none; }
+
+ /* ── Intro ── */
+    .ow-intro {
+      margin-top: 1rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.97rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+ 
+    /* ── Slider wrapper ── */
+    .ow-slider-wrap {
+      position: relative;
+      user-select: none;
+    }
+ 
+    /* Main image area */
+    .ow-slider {
+      position: relative;
+      border: 2px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #111;
+    }
+    .ow-slides {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+    .ow-slide { min-width: 100%; }
+    .ow-slide img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      display: block;
+      background: #111;
+      cursor: zoom-in;
+      image-rendering: pixelated;
+    }
+ 
+    /* Arrow buttons */
+    .ow-arr {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      border: none;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .ow-arr:hover { background: rgba(63,169,245,0.75); }
+    .ow-arr-l { left: 10px; }
+    .ow-arr-r { right: 10px; }
+ 
+    /* Image title and caption */
+    .ow-caption {
+      text-align: center;
+      margin-top: 14px;
+      min-height: 48px;
+    }
+    .ow-caption-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .ow-caption-desc {
+      font-size: 0.88rem;
+      color: #777;
+    }
+ 
+    /* Dots */
+    .ow-dots {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .ow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #444;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s;
+    }
+    .ow-dot.on { background: var(--highlight); }
+ 
+    /* Counter */
+    .ow-counter {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      margin-top: 8px;
+    }
+ 
+    /* ── Lightbox ── */
+    .lb-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+    .lb-overlay.open { display: flex; }
+    .lb-overlay img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      cursor: default;
+      image-rendering: pixelated;
+    }

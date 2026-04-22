@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pawis Kitsanawan – Game Designer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pawis Kitsanawan</h1>
+    <p class="tagline"><h2><h>Game Designer</h2></p>
+<nav>
+  <a href="/PawisKPortSite/">Home</a>
+  <div class="dropdown">
+    <span class="dropbtn">Projects ▾</span>
+    <div class="dropdown-content">
+      <a href="/PawisKPortSite/projects/internship.html">Internship Project</a>
+      <a href="/PawisKPortSite/projects/personal.html">Personal Project</a>
+      <a href="/PawisKPortSite/projects/gamejam.html">Game Jam</a>
+    </div>
+  </div>
+    <a href="/PawisKPortSite/otherwork.html">Other Work</a>
+  <a href="/PawisKPortSite/about.html">About & Resume</a>
+  <a href="/PawisKPortSite/contact.html">Contact Me</a>
+</nav>
+  </header>
+<main>
+    <section>
+      <h2>Other Work</h2>
+    </section>
+ 
+    <!-- ── Intro description ── -->
+    <p class="ow-intro">Game design is my main focus, but I also enjoy making pixel art on the side. This page is a small collection of personal pieces made purely for fun.</p>
+ 
+    <!-- ── Slider ── -->
+    <div class="ow-slider-wrap">
+      <div class="ow-slider" id="owSlider">
+        <div class="ow-slides" id="owSlides">
+ 
+          <!-- ↓ ADD YOUR IMAGES HERE
+               Copy and paste a slide block for each piece.
+               - src: path to your image
+               - data-title: name of the piece
+               - data-caption: short description or context -->
+ 
+          <!-- Slide 1 -->
+		    <div class="ow-slide">
+            <img
+              src="images/Moai.png"
+              alt="Pixel art 0"
+              data-title="Moai"
+              data-caption="Moai"
+            />
+          </div>
+		  
+          <div class="ow-slide">
+            <img
+              src="images/BlueEye.png"
+              alt="Pixel art 1"
+              data-title="Blue Eye White Dragon"
+              data-caption="Blue Eye White Dragon from Anime card game Yu-Gi-Oh"
+            />
+          </div>
+ 
+          <!-- Slide 2 -->
+          <div class="ow-slide">
+            <img
+              src="images/SpookyRoom.png"
+              alt="Pixel art 2"
+              data-title="Spooky Romm"
+              data-caption="Isometric View Spooky room theme"
+            />
+          </div>
+ 
+          <!-- Slide 3 -->
+          <div class="ow-slide">
+            <img
+              src="images/BloodRiver.png"
+              alt="Pixel art 3"
+              data-title="Blood River"
+              data-caption="Warrior preparing to fight the monster. Inspire by Elden ring and Berserk manga"
+            />
+          </div>
+		  
+		   <div class="ow-slide">
+            <img
+              src="images/JesusChrist.png"
+              alt="Pixel art 4"
+              data-title="Jesus Christ"
+              data-caption="Arts of Jesus Christ, the central figure of Christianity."
+            />
+          </div>
+		  
+		  	<div class="ow-slide">
+            <img
+              src="images/LuffyAnimated.gif"
+              alt="Pixel art 5"
+              data-title="Luffy Running"
+              data-caption="One piece's Main Protagonist running animation"
+            />
+          </div>
+		  
+		  	  	<div class="ow-slide">
+            <img
+              src="images/BabyItemLayout.png"
+              alt="Pixel art 6"
+              data-title="Baby Item Layout"
+              data-caption="If RPG game main character is just a baby? IDK"
+            />
+          </div>
+ 
+          <!-- Add more slides here ↑ -->
+ 
+        </div>
+ 
+        <button class="ow-arr ow-arr-l" id="owPrev">&#8249;</button>
+        <button class="ow-arr ow-arr-r" id="owNext">&#8250;</button>
+      </div>
+ 
+      <!-- Caption -->
+      <div class="ow-caption">
+        <div class="ow-caption-title" id="owTitle"></div>
+        <div class="ow-caption-desc" id="owDesc"></div>
+      </div>
+ 
+      <!-- Dots + counter -->
+      <div class="ow-dots" id="owDots"></div>
+      <div class="ow-counter" id="owCounter"></div>
+    </div>
+ 
+  </main>
+ 
+  <footer>
+    <p>&copy; 2026 Pawis Kitsanawan</p>
+  </footer>
+ 
+  <!-- Lightbox -->
+  <div class="lb-overlay" id="lbOverlay">
+    <img id="lbImg" src="" alt="" />
+  </div>
+ 
+  <script>
+    const slidesEl  = document.getElementById('owSlides');
+    const dotsEl    = document.getElementById('owDots');
+    const titleEl   = document.getElementById('owTitle');
+    const descEl    = document.getElementById('owDesc');
+    const counterEl = document.getElementById('owCounter');
+    const images    = document.querySelectorAll('.ow-slide img');
+    const total     = images.length;
+    let current     = 0;
+ 
+    // Build dots
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('button');
+      d.className = 'ow-dot' + (i === 0 ? ' on' : '');
+      d.setAttribute('aria-label', 'Go to image ' + (i + 1));
+      d.onclick = () => goTo(i);
+      dotsEl.appendChild(d);
+    }
+ 
+    function updateCaption() {
+      const img = images[current];
+      titleEl.textContent   = img.dataset.title   || '';
+      descEl.textContent    = img.dataset.caption  || '';
+      counterEl.textContent = (current + 1) + ' / ' + total;
+    }
+ 
+    function goTo(n) {
+      current = (n + total) % total;
+      slidesEl.style.transform = 'translateX(-' + (current * 100) + '%)';
+      document.querySelectorAll('.ow-dot').forEach((d, i) => d.classList.toggle('on', i === current));
+      updateCaption();
+    }
+ 
+    document.getElementById('owPrev').onclick = () => goTo(current - 1);
+    document.getElementById('owNext').onclick = () => goTo(current + 1);
+ 
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft')  goTo(current - 1);
+      if (e.key === 'ArrowRight') goTo(current + 1);
+    });
+ 
+    // Init
+    updateCaption();
+ 
+    // Lightbox
+    const overlay = document.getElementById('lbOverlay');
+    const lbImg   = document.getElementById('lbImg');
+ 
+    images.forEach(img => {
+      img.onclick = () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        overlay.classList.add('open');
+      };
+    });
+ 
+    overlay.onclick = (e) => {
+      if (e.target === overlay) overlay.classList.remove('open');
+    };
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') overlay.classList.remove('open');
+    });
+  </script>
+ 
+</body>
+</html>
